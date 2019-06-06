@@ -5,12 +5,12 @@ LABEL maintainer="maak.daniel@gmail.com" \
         description="Small and simple DNS Server with dnsmasq"
 
 RUN apk --no-cache --update add dnsmasq && \
-    mkdir /etc/dnsmasq && \
-    echo "conf-file=/etc/dnsmasq/dnsmasq.conf" > /etc/dnsmasq.conf
+    mkdir /etc/dnsmasq
 
-COPY *.conf /etc/dnsmasq/
+COPY dnsmasq.conf /etc/dnsmasq.conf
 
 EXPOSE 53/tcp 53/udp
-VOLUME [ "/dnsmasq" ]
+VOLUME [ "/etc/dnsmasq" ]
+VOLUME [ "/etc/dnsmasq.d/" ]
 
 ENTRYPOINT [ "dnsmasq", "-v", "-k", "-q" ]
