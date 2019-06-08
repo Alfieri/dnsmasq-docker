@@ -13,4 +13,4 @@ EXPOSE 53/tcp 53/udp
 VOLUME [ "/etc/dnsmasq" ]
 VOLUME [ "/etc/dnsmasq.d/" ]
 
-ENTRYPOINT [ "dnsmasq", "-v", "-k", "-q" ]
+ENTRYPOINT [ "dnsmasq", "--keep-in-foreground", "--log-queries=extra", "--log-facility=-" ]
