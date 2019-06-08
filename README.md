@@ -11,10 +11,21 @@ from http://www.thekelleys.org.uk/dnsmasq/doc.html
 
 
 ## Usage
+There are two volumes to map. The `/etc/dnsmasq/` volume is for the two config files for configure local hosts and nameservers (see example-hosts.conf and example-nameservers.conf). The `/etc/dnsmasq.d/` is the standard config directory for confiugre additional stuff for dnsmasq. 
+
+The dnsmasq start is created as Entrypoint so any additinal commandline parameter are passed through. So you can ether configure dnsmasq via commandline or via the `/etc/dnsmasq.d/` volume.
+
+
 Important: dnsmasq requires the `NET_ADMIN` capabilities to run.
 
 1. pull the image `docker pull alfieri/dnsmasq`
-2. create the container `docker create --name dnsmasq -p 53:53/tcp -p 53:53/udp alfieri/dnsmasq`
+2. create the container    
+   `
+   docker create --name dnsmasq --cap-add=NET_ADMIN
+        -p 53:53/tcp -p 53:53/udp
+        -v <host_dir>:/etc/dnsmasq -v <host_dir>:/etc/dnsmasq.d
+        alfieri/dnsmasq
+   `
 3. start the created dnsmasq container `docker start dnsmasq`. If it raises an error see the troublshoot section for help.
 
 
