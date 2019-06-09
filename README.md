@@ -40,12 +40,10 @@ Important: dnsmasq requires the `NET_ADMIN` capabilities to run.
 
 1. pull the image `docker pull alfieri/dnsmasq`
 2. create the container    
-   `
-   docker create --name dnsmasq --cap-add=NET_ADMIN
+   ` docker create --name dnsmasq --cap-add=NET_ADMIN
         -p 53:53/tcp -p 53:53/udp
         -v <host_dir>:/etc/dnsmasq -v <host_dir>:/etc/dnsmasq.d
-        alfieri/dnsmasq
-   `
+        alfieri/dnsmasq `
 3. start the created dnsmasq container `docker start dnsmasq`. If it raises an error see the troublshoot section for help.
 
 
