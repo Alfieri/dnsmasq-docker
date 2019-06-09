@@ -24,6 +24,7 @@ from http://www.thekelleys.org.uk/dnsmasq/doc.html
 | arm64 | arm64v8-latest |
 | armhf | arm32v6-latest |
 
+Special thanks to [Ricardo Amaral](https://stackoverflow.com/users/40480/ricardo-amaral) and his solution for multi arch build for Docker Hub on Stack Overflow https://stackoverflow.com/questions/54578066/how-to-build-a-docker-image-on-a-specific-architecture-with-docker-hub
 
 ### Additional Links
 <a href="http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html">dnsmasq Manpage</a>
