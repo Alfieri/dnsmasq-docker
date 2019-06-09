@@ -1,10 +1,29 @@
 # dnsmasq Service in a Docker Container
+[![GitHub issues](https://img.shields.io/github/issues/Alfieri/dnsmasq-docker.svg)](https://github.com/Alfieri/dnsmasq-docker/issues)
+[![GitHub license](https://img.shields.io/github/license/Alfieri/dnsmasq-docker.svg)](https://github.com/Alfieri/dnsmasq-docker/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Alfieri/dnsmasq-docker.svg?label=Github%20stars)](https://github.com/Alfieri/dnsmasq-docker/stargazers)
+
+![docker build](https://img.shields.io/docker/cloud/build/alfieri/dnsmasq.svg)
+![docker build](https://img.shields.io/docker/cloud/automated/alfieri/dnsmasq.svg)
+![image size](https://img.shields.io/microbadger/image-size/alfieri/dnsmasq.svg)
+![layers](https://img.shields.io/microbadger/layers/alfieri/dnsmasq.svg)
+![docker pulls](https://img.shields.io/docker/pulls/alfieri/dnsmasq.svg)
+![docker Stars](https://img.shields.io/docker/stars/alfieri/dnsmasq.svg)
+
 Small and simple DNS Server with dnsmasq and docker
 
 ## Info
 > Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot. It is designed to be lightweight...
 
 from http://www.thekelleys.org.uk/dnsmasq/doc.html
+
+### Supported Architectures
+| Architecture | Tag |
+| :----: | --- |
+| x86-64 | latest |
+| arm64 | arm64v8-latest |
+| armhf | arm32v6-latest |
+
 
 ### Additional Links
 <a href="http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html">dnsmasq Manpage</a>
