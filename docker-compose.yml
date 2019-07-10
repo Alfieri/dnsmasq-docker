@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  dnsmasq:
+    image: alfieri/dnsmasq:latest
+    restart: always
+    ports:
+      - "53:53/tcp"
+      - "53:53/upd"
+    volumes:
+      - "<your config path here>:/etc/dnsmasq"
+    cap_add:
+      - NET_ADMIN
